@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript OOP Object</title>
+</head>
+<body>
+    <script>
+        document.writeln('<h1>Javascript OOP Object</h1>');
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            // method pada constructor function
+            this.greet = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        const ega = new Person('Ega', 'Teja');
+        // ega.firstName = 'Ega';
+        // ega.lastName = 'Teja Pratama';
+        console.log(ega);
+        ega.greet("Budi");
+
+        const budi = new Person();
+        budi.firstName = 'Budi';
+        budi.lastName = 'Nugraha';
+        console.log(budi);
+    </script>
+
+</body>
+</html>
