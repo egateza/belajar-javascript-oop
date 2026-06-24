@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript OOP Constructor Inheritance</title>
+</head>
+<body>
+
+    <script>
+        document.writeln('<h1>Javascript OOP Constructor Inheritance</h1>');
+        function Employee(firstName) {
+            this.firstName = firstName;
+            this.greet = function(name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        function Manager(firstName, lastName) {
+            this.lastName = lastName;
+            Employee.call(this, firstName);
+        }
+
+        const person = new Manager('Ega', 'Teja');
+        console.log(person);
+        console.log(person.greet('Budi'));
+    </script>
+
+</body>
+</html>
